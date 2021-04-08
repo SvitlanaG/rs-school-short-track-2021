@@ -20,7 +20,7 @@ function findIndex(array, value) {
     const middleOfArray = Math.floor((startSearch + endSearch) / 2);
 
     if (array[middleOfArray] === value) index = middleOfArray;
-    else if (array[middleOfArray] < value) startSearch = middleOfArray + 1;
+    if (array[middleOfArray] < value) startSearch = middleOfArray + 1;
     else endSearch = middleOfArray - 1;
   }
   return index;
